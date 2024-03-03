@@ -58,7 +58,7 @@ router.get('/sub', async (req, res) => {
 
   // token格式为ghu_xxx
   if (!token || token.indexOf('ghu_') === -1) {
-    res.send({
+    res.json({
       code: 0,
       data: {
         message: 'token格式错误'
