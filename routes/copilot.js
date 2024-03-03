@@ -77,7 +77,7 @@ router.get('/sub', async (req, res) => {
     console.log(username, sku, 'username, sku');
     if (username) {
       console.log('获取信息成功');
-      res.send({
+      res.json({
         code: 1,
         data: {
           username,
@@ -93,7 +93,7 @@ router.get('/sub', async (req, res) => {
     if (error.status == 403) {
       // console.log('错误日志已保存到err.log文件，请查看');
       // console.log(`* 您的token：${token}\n* 当前状态：已被封禁`);
-      res.send({
+      res.json({
         code: 0,
         data: {
           status: '已封禁',
