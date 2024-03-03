@@ -51,8 +51,6 @@ function getCopilotInfo(token) {
 }
 
 
-// 我希望携带参数?token=ghu_xxx
-// 1. 通过req.query.token获取
 router.get('/sub', async (req, res) => {
   const { token } = req.query;
 
